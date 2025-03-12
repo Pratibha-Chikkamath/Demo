@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+{% load mathfilters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Access the variable</h1>
+<h3> x : {{num1}} </h3>
+<h3> y : {{num2}} </h3>
+<h3> z : {{num3}}</h3>
+
+<h1>Mathematical operation</h1>
+<h3> the sum of x and y value is {{ num1|add:num2}}</h3>
+<h3>the subtraction of num1 and num2 is {{ num1|sub:num2}}</h3>
+<h3>the multification of num1 and num2 is {{ num1|mul:num2}}</h3>
+<h3>the division of num1 and num2 is {{ num1|div:num2}}</h3>
+<h3>Interger Division {{ num1|intdiv:num2}}</h3>
+<h3>mod Division {{ num1|mod:num2}}</h3>
+
+<h1>Sequence data</h1>
+<h3>list items   : {{list}} </h3>
+<h3>first element :{{list.0}}</h3>
+<h3>first element :{{list.5}}</h3>
+
+<h3> display alternate elements :{{list|slice:"0:7:2"}}</h3>
+<h3>reverse order : {{list|slice:"::-1"}}</h3>
+<h3> Length of the list : {{list|length}}</h3>
+<h1> working with forloop</h1>
+{% for i in list %}
+    {% if i|mod:2 == 0 %}
+            {{i}}
+    {% endif %}
+{% endfor %}
+<h1>Working with Nested values</h1>
+<h3>nested list : {{names}}</h3>
+<h3>print ramu : {{names.3.1}}</h3>
+<h3> print ramu :</h3>
+
+<h1>Working with dictionary</h1>
+<h3>dictionary :{{dic}}</h3>
+<h3>student1 : {{dic.student1}}</h3>
+<h3>display python marks student2 :{{dic.student2.python}}</h3>
+<h1>Assignment find maximum of 3 numbers</h1>
+{% if num1 > num2 and num1 > num3 %}
+    {{ num1 }}
+{% elif num2 > num3 %}
+    {{ num2 }}
+{% else %}
+    {{ num3 }}
+{% endif %}
+</body>
+</html>
