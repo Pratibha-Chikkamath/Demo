@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .menu-card {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .menu-card h2 {
+            margin-bottom: 10px;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-card">
+        <h2>Restaurant Menu</h2>
+        <div class="menu-item">
+            <span>Pizza</span>
+            <span>$12.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Burger</span>
+            <span>$8.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Pasta</span>
+            <span>$10.99</span>
+        </div>
+        <div class="menu-item">
+            <span>Salad</span>
+            <span>$6.99</span>
+        </div>
+    </div>
+</body>
+</html>
